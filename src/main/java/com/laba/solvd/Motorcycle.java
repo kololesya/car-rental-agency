@@ -15,14 +15,14 @@ public class Motorcycle implements IVehicle, IMotorVehicle{
     public int getYear() { return year; }
 
     public void setWheels(int wheels) {
-        if (wheels < 2) throw new IllegalArgumentException("Мотоцикл должен иметь как минимум 2 колеса.");
+        if (wheels < 2) throw new IllegalArgumentException("A motorcycle must have at least 2 wheels.");
         this.wheels = wheels;
     }
     public int getWheels() { return wheels; }
 
     public void setMotorcycleType(String type) {
-        if (!type.matches("спорт|круизер|внедорожник")) {
-            throw new IllegalArgumentException("Недопустимый тип мотоцикла.");
+        if (!type.matches("sport | cruiser | off-road")) {
+            throw new IllegalArgumentException("Invalid motorcycle type.");
         }
         this.type = type;
     }
